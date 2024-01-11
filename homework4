@@ -1,1 +1,113 @@
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ git config --global user.name "pınar isler"
+git config --global user.email "pinarisler1234@gmail.com"
+git config --global core.editor "git bash"
 
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$
+
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ git config --global --list
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=pınar isler
+user.email=pinarisler1234@gmail.com
+core.editor=git bash
+
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ git clone https://github.com/pinar isler/hmw4-.git
+Cloning into 'isler/hmw4-.git'...
+remote: Not Found
+fatal: repository 'https://github.com/pinar/' not found
+
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ ls
+README.md  homework4.rtf  homework4.txt  isler/
+
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ ls -a
+./  ../  .git/  .gitattributes  README.md  homework4.rtf  homework4.txt  isler/
+
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ touch .gitignore
+
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ git add .gitignore
+git commit -m "setting up gitignore"
+[main f506aa9] setting up gitignore
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .gitignore      pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (feature-3)
+$ git checkout main
+git merge feature-1
+Switched to branch 'main'
+M       README.md
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+Already up to date.
+
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ $  git checkout -b feature-2 main
+git checkout -b feature-3 main
+bash: $: command not found
+fatal: a branch named 'feature-3' already exists
+
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ git add .
+git commit -m "satisfying requirement change two"
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+[main 2f05180] satisfying requirement change two
+ 2 files changed, 1 insertion(+)
+ create mode 100644 homework4.txt
+
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ git add .
+git commit -m "satisfying requirement change three"
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 2 and 1 different commits each, respectively.
+
+nothing to commit, working tree clean
+
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ git checkout main
+git merge feature-2
+Already on 'main'
+Your branch and 'origin/main' have diverged,
+and have 2 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+Already up to date.
+
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ git checkout main
+git merge feature-3
+Already on 'main'
+Your branch and 'origin/main' have diverged,
+and have 2 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+Already up to date.
+
+pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ git push origin main feature-1 feature-2 feature-3
+fatal: User cancelled dialog.
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/bin/git-askpass.exe'
+Username for 'https://github.com': error: unable to read askpass response from 'C:/Program Files/Git/mingw64/bin/git-askpass.exe'
+Password for 'https://$@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/pnr88pnr/hwk4-.git/' pinar@LAPTOP-JANS0GJC MINGW64 ~/Documents/GitHub/hwk4- (main)
+$ echo "Answers to questions..." > hwk4-/homework4.txt
+git add hwk4-/homework4.txt
+git commit -m "Adding answers to homework4.txt"
+git push origin main
+bash: hwk4-/homework4.txt: No such file or directory
+fatal: pathspec 'hwk4-/homework4.txt' did not match any files
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.
+
+nothing to commit, working tree clean
+To https://github.com/pnr88pnr/hwk4-.git
+ ! [rejected]        main -> main (non-fast-forward)
